@@ -650,3 +650,12 @@ body .footer-top nav { display: flex; flex-wrap: nowrap; max-width: none; gap: 2
   #machines { padding-top: 30px; }
   .service-experience-image { margin-top: 25px; }
 }
+/* Recovery enhancements */
+#carousel .scene{will-change:transform,opacity}
+#viewport{user-select:none}
+nav.open{display:flex}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-visible{opacity:1;transform:none}
+.request-summary{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee9f5;padding:1rem;border-radius:8px;max-height:40vh;overflow:auto}
+@media(max-width:850px){header nav.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:24px;flex-direction:column;align-items:stretch;box-shadow:0 15px 25px #38275022;z-index:40}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.scene{transition:none!important}}
