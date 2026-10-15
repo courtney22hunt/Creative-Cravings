@@ -716,3 +716,18 @@ nav.open{display:flex}
 .about-reference-bottom>.about-reference-right{padding:0}
 .about-reference-bottom>.about-reference-right p{font-size:clamp(16px,1.25vw,20px);line-height:1.72;max-width:none;margin:0 0 24px}
 @media(max-width:760px){.about-reference-top{padding-top:40px;padding-bottom:14px}.about-reference-bottom{grid-template-columns:1fr;gap:30px;padding-top:15px;padding-bottom:52px}.about-reference-left h2{margin-bottom:25px}.about-reference-left img{width:230px}}
+
+/* Site-wide readable body copy; heading sizes remain unchanged */
+body{font-size:19px}
+nav#nav{font-size:16px;gap:clamp(12px,1.55vw,26px)}
+nav#nav>a:not(.button){font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.025em}
+nav#nav .button.small{font-size:14px}
+.facility-tabs button{font-size:15px;font-weight:650;letter-spacing:.035em;padding:20px 4px}
+.location-body,.location-body p{font-size:17px;line-height:1.7}
+.location-body a,.facility-copy a,.machine-card button{font-size:16px}
+.facility-copy p,.section-heading>p,.choice-grid p,.machine-card p,.team-grid p,.consultation p,.experience p{font-size:18px}
+.about-reference-bottom{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);column-gap:clamp(45px,6vw,105px)}
+.about-reference-bottom>.about-reference-right p{font-size:19px;line-height:1.72}
+#locations{scroll-margin-top:112px}
+@media(max-width:1050px){nav#nav{gap:12px}nav#nav>a:not(.button){font-size:14px}}
+@media(max-width:760px){body{font-size:17px}.about-reference-bottom{grid-template-columns:1fr}.about-reference-bottom>.about-reference-right p{font-size:18px}.facility-tabs{overflow-x:auto;justify-content:flex-start;gap:25px}.facility-tabs button{white-space:nowrap;flex:0 0 auto;font-size:14px}#locations{scroll-margin-top:85px}}
