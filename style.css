@@ -706,3 +706,13 @@ nav.open{display:flex}
 .about-reference-left h2{margin-bottom:24px}
 .about-reference-left img{width:min(290px,55%)}
 @media(max-width:760px){.about-reference-top{padding-top:38px;padding-bottom:12px}.about-reference-intro-grid{grid-template-columns:1fr;gap:10px}.about-reference-bottom{padding-top:12px;padding-bottom:45px}.about-reference-left img{width:220px}}
+
+/* Final About Us: heading and logo left, all three paragraphs right */
+.about-reference-top{padding-top:52px;padding-bottom:20px;border:0}
+.about-reference-top h2{margin:0}
+.about-reference-bottom{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,95px);align-items:start;padding-top:24px;padding-bottom:72px}
+.about-reference-left h2{margin:0 0 34px}
+.about-reference-left img{width:min(300px,65%);height:auto}
+.about-reference-bottom>.about-reference-right{padding:0}
+.about-reference-bottom>.about-reference-right p{font-size:clamp(16px,1.25vw,20px);line-height:1.72;max-width:none;margin:0 0 24px}
+@media(max-width:760px){.about-reference-top{padding-top:40px;padding-bottom:14px}.about-reference-bottom{grid-template-columns:1fr;gap:30px;padding-top:15px;padding-bottom:52px}.about-reference-left h2{margin-bottom:25px}.about-reference-left img{width:230px}}
