@@ -1,19 +1,6 @@
 (()=>{'use strict';
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.querySelectorAll(s));
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const scenes=$$('#carousel .scene'),tabs=$$('#facility-tabs button');
-const labels=['Commercial buildings','Hospitals','Doctors’ offices','Schools','Workplaces & other facilities'];
-const messages=['Convenient snacks and drinks for tenants and guests.','Thoughtful refreshment options for busy care environments.','A welcoming break for patients, visitors and staff.','Convenient choices designed around school needs.','Make the everyday pause a little more convenient.'];
-let active=0, timer, startX=null;
-function show(i){if(!scenes.length)return;active=(i+scenes.length)%scenes.length;const w=Math.min(innerWidth<700?105:185,innerWidth*.16);
-scenes.forEach((el,n)=>{let d=n-active;if(d>2)d-=scenes.length;if(d< -2)d+=scenes.length;const depth=Math.abs(d);el.style.transform='translate3d('+(-d*w)+'px,'+(depth*13-8)+'px,'+(-depth*125)+'px) rotateY('+(d*17)+'deg)';el.style.opacity=depth===0?'1':depth===1?'.72':'.38';el.style.zIndex=String(10-depth);});
-tabs.forEach((el,n)=>{el.classList.toggle('active',n===active);el.setAttribute('aria-pressed',String(n===active))});
-const kicker=$('#facility-kicker'),copy=$('#facility-text'),cta=$('#facility-cta');if(kicker)kicker.textContent=labels[active].toUpperCase();if(copy)copy.textContent=messages[active];if(cta)cta.href='#location-'+active;
-}
-function pause(){clearInterval(timer)}function resume(){pause();if(!reduced)timer=setInterval(()=>show(active+1),4200)}
-tabs.forEach((b,i)=>b.addEventListener('click',()=>{show(i);resume()}));
-const viewport=$('#viewport');if(viewport){viewport.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();show(active+(e.key==='ArrowRight'?1:-1));resume()}});viewport.addEventListener('pointerdown',e=>{startX=e.clientX;pause()});viewport.addEventListener('pointerup',e=>{if(startX!==null&&Math.abs(e.clientX-startX)>35)show(active+(e.clientX<startX?1:-1));startX=null;resume()});viewport.addEventListener('mouseenter',pause);viewport.addEventListener('mouseleave',resume)}
-show(0);resume();
 const menu=$('#menu'),nav=$('#nav');if(menu&&nav){menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});$$('a',nav).forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}))}
 const locationButtons=$$('#location-list article h3 button');
 const details=[
