@@ -1,4 +1,4 @@
-# Creative Cravings
+# Convenient Cravings
 
 New Jersey vending-services website with responsive Home and About pages, animated vending carousel, transparent machine images, and reduced-motion support.
 

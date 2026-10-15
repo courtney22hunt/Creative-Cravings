@@ -1,4 +1,4 @@
-# Creative Cravings — recovered website archive
+# Convenient Cravings — recovered website archive
 
 This is a partial recovery from a browser-saved MHTML file, not the original development project.
 

@@ -663,7 +663,7 @@ nav.open{display:flex}
 /* Continuous carousel: let requestAnimationFrame own transforms without CSS easing */
 #carousel .scene{transition:none!important;backface-visibility:hidden;will-change:transform,opacity}
 
-/* About Creative Cravings */
+/* About Convenient Cravings */
 .about-section{background:var(--lavender);scroll-margin-top:112px}
 .about-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,6vw,110px);align-items:start}
 .about-intro h2{margin-bottom:24px}.about-lead{font-size:clamp(19px,2vw,25px);line-height:1.45;color:var(--deep);margin-bottom:30px}
