@@ -659,3 +659,6 @@ nav.open{display:flex}
 .request-summary{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee9f5;padding:1rem;border-radius:8px;max-height:40vh;overflow:auto}
 @media(max-width:850px){header nav.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:24px;flex-direction:column;align-items:stretch;box-shadow:0 15px 25px #38275022;z-index:40}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.scene{transition:none!important}}
+
+/* Continuous carousel: let requestAnimationFrame own transforms without CSS easing */
+#carousel .scene{transition:none!important;backface-visibility:hidden;will-change:transform,opacity}
