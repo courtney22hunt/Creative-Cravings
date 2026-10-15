@@ -685,3 +685,14 @@ nav.open{display:flex}
 .about-reference-left img{display:block;width:min(330px,65%);height:auto;object-fit:contain}
 .about-reference-right p{font-size:clamp(17px,1.35vw,21px);line-height:1.7;max-width:690px;margin:0 0 28px}
 @media(max-width:760px){.about-reference{scroll-margin-top:85px}.about-reference-top{padding:55px 6% 65px}.about-reference-bottom{grid-template-columns:1fr;padding:65px 6%;gap:38px}.about-reference-left h2{margin-bottom:36px}.about-reference-left img{width:220px}.about-reference-right p{font-size:17px}}
+
+/* About Us alignment and spacing refinement */
+.about-reference-top,.about-reference-bottom{padding-left:7%;padding-right:7%}
+.about-reference-top{padding-top:70px;padding-bottom:72px}
+.about-reference-top h2{margin-bottom:26px}
+.about-reference-top p{max-width:960px}
+.about-reference-bottom{padding-top:78px;padding-bottom:82px;gap:clamp(40px,6vw,95px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+.about-reference-left h2{margin-top:0;margin-bottom:48px}
+.about-reference-right{padding-top:0}
+.about-reference-right p:first-child{margin-top:0}
+@media(max-width:760px){.about-reference-top,.about-reference-bottom{padding-left:6%;padding-right:6%}.about-reference-top{padding-top:46px;padding-bottom:50px}.about-reference-bottom{padding-top:50px;padding-bottom:60px;gap:28px;grid-template-columns:1fr}.about-reference-left h2{margin-bottom:28px}}
