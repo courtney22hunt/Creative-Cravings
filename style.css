@@ -731,3 +731,15 @@ nav#nav .button.small{font-size:14px}
 #locations{scroll-margin-top:112px}
 @media(max-width:1050px){nav#nav{gap:12px}nav#nav>a:not(.button){font-size:14px}}
 @media(max-width:760px){body{font-size:17px}.about-reference-bottom{grid-template-columns:1fr}.about-reference-bottom>.about-reference-right p{font-size:18px}.facility-tabs{overflow-x:auto;justify-content:flex-start;gap:25px}.facility-tabs button{white-space:nowrap;flex:0 0 auto;font-size:14px}#locations{scroll-margin-top:85px}}
+
+/* Slightly larger desktop text; heading and mobile sizes stay as defined above. */
+@media (min-width: 1024px) {
+  :root { --body-size: 19px; --lead-size: 23px; }
+  body { font-size: 20px; }
+  body nav#nav, body nav#nav > a:not(.button) { font-size: 18px; }
+  body nav#nav .button.small { font-size: 16px; }
+  body .facility-tabs button { font-size: 19px; }
+  body .about-reference-bottom > .about-reference-right p { font-size: 21px; }
+  body .note, body .scene-note, body figcaption, body .footer-bottom { font-size: 14px; }
+  body .eyebrow, body .tag, body .phone small { font-size: 12px; }
+}
